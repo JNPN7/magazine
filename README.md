@@ -1,0 +1,2 @@
+# magazine
+just practice stuffs
