@@ -34,7 +34,7 @@
 									<a class="post-category <?=CAT_COLOR[$blog->categoryid%4]?>" href="category.php?id=<?=$blog->categoryid?>"><?=$blog->category?></a>
 									<span class="post-date"><?=date('M d Y', strtotime($blog->created_date))?></span>
 								</div>
-								<h3 class="post-title"><a href="blog-post.php?id=<?=$blog->id?>"><?=$blog->title?>/a></h3>
+								<h3 class="post-title"><a href="blog-post.php?id=<?=$blog->id?>"><?=$blog->title?></a></h3>
 							</div>
 						</div>
 					</div>
@@ -76,7 +76,7 @@
 									<a class="post-category <?=CAT_COLOR[$blog->categoryid%4]?>" href="category.php?id=<?=$blog->categoryid?>"><?=$blog->category?></a>
 									<span class="post-date"><?=date('M d Y', strtotime($blog->created_date))?></span>
 								</div>
-								<h3 class="post-title"><a href="blog-post.php?id=<?=$blog->id?>"><?=$blog->title?>/a></h3>
+								<h3 class="post-title"><a href="blog-post.php?id=<?=$blog->id?>"><?=$blog->title?></a></h3>
 							</div>
 						</div>
 					</div>
@@ -115,7 +115,7 @@
 											<a class="post-category <?=CAT_COLOR[$blog->categoryid%4]?>" href="category.php?id=<?=$blog->categoryid?>"><?=$blog->category?></a>
 											<span class="post-date"><?=date('M d Y', strtotime($blog->created_date))?></span>
 										</div>
-										<h3 class="post-title"><a href="blog-post.php?id=<?=$blog->id?>"><?=$blog->title?>/a></h3>
+										<h3 class="post-title"><a href="blog-post.php?id=<?=$blog->id?>"><?=$blog->title?></a></h3>
 									</div>
 								</div>
 							</div>
@@ -147,7 +147,7 @@
 											<a class="post-category <?=CAT_COLOR[$blog->categoryid%4]?>" href="category.php?id=<?=$blog->categoryid?>"><?=$blog->category?></a>
 											<span class="post-date"><?=date('M d Y', strtotime($blog->created_date))?></span>
 										</div>
-										<h3 class="post-title"><a href="blog-post.php?id=<?=$blog->id?>"><?=$blog->title?>/a></h3>
+										<h3 class="post-title"><a href="blog-post.php?id=<?=$blog->id?>"><?=$blog->title?></a></h3>
 									</div>
 								</div>
 							</div>

@@ -1,6 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
-	$header = 'category';
+	$header = 'Category';
 	if (isset($_GET['id']) && !empty($_GET['id'])) {
 		$cat_id = (int)$_GET['id'];
 		if($cat_id){

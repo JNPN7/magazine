@@ -68,10 +68,11 @@
 						<div class="nav-btns">
 							<button class="aside-btn"><i class="fa fa-bars"></i></button>
 							<button class="search-btn"><i class="fa fa-search"></i></button>
-							<div class="search-form">
-								<input class="search-input" type="text" name="search" placeholder="Enter Your Search ...">
-								<button class="search-close"><i class="fa fa-times"></i></button>
-							</div>
+							<form class="search-form" action="search.php" method="POST">
+									<input id="search_input" class="search-input" type="text" name="search" placeholder="Enter Your Search ...">
+									<button class="search-close"><i class="fa fa-times"></i></button>
+									<div id='search_filter' style="background: #fff"></div>
+							</form>
 						</div>
 						<!-- /search & aside toggle -->
 					</div>
@@ -165,3 +166,23 @@
 		?>
 		</header>
 		<!-- /Header -->
+
+<script src="assets/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#search_input').on('keyup', function(){
+			value = $(this).val();
+			console.log(value);
+			$.post('ajax_fetch/search_data.php',{
+				value: value,
+				searchin: 'title',
+				offset: 0,
+				limit: 4
+			},function(data, status){
+				console.log(status);
+				$('#search_filter').html(data);
+			});
+		});
+	});
+</script>

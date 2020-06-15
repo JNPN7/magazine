@@ -1,6 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
-	$header = 'blog-post';
+	$header = 'Blog-post';
 	include 'inc/header.php';
 	if (isset($_GET['id']) && !empty($_GET['id'])) {
 		$blog_id = (int)$_GET['id'];

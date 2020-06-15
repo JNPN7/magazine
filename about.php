@@ -1,6 +1,6 @@
 <?php 
 	include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
-	$header = 'about';
+	$header = 'About';
 	$bread = 'About Us';
 	include 'inc/header.php';
 ?>
