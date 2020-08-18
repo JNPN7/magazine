@@ -1,6 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
 	define('CAT_COLOR', ['cat-1','cat-2','cat-3','cat-4']);
+	$count = 0;
 	function fetch_data($offset, $limit=4, $categoryid = -1){
 		if ($categoryid == -1){
 			$Blog = new Blog;
@@ -29,6 +30,7 @@
 	}
 	if ($popularBlog) {
 		foreach ($popularBlog as $key => $blog) {
+			$count += 1;
 			# code...
 ?>
 			<!-- post -->
@@ -55,15 +57,29 @@
 			<!-- /post -->
 <?php
 		}
+		if ($count < $limit){
+?>
+			<div>
+				<p style="text-align: center;">Sorry!!!  No More Results</p>
+			</div>
+			<script type="text/javascript">
+				console.log($('#loadmore').html());
+				// document.getElementById('#loadmore').remove();
+				$('#loadmore').remove();
+			</script>
+		
+<?php
+		}
 	}else{
-
 ?>
 		<div>
 			<p style="text-align: center;">Sorry!!!  No More Results</p>
 		</div>
 		<script type="text/javascript">
-			console.log(document.getElementById('#loadmore').innerHTML());
-			document.getElementById('#loadmore').remove();
+			console.log($('#loadmore').html());
+			// document.getElementById('#loadmore').remove();
+			$('#loadmore').remove();
+
 		</script>
 <?php
 	}

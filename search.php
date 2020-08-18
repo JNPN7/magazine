@@ -44,6 +44,9 @@
 									</div>
 								</div>
 							</div>
+							<?php
+									}
+							?>
 							<div id="filter_data" data-search="<?=$search?>" data-searchin="<?=$searchin?>" data-limit='0'></div>
 							
 							<div class="col-md-12">
@@ -51,10 +54,11 @@
 									<button id="loadmore" class="primary-button center-block">Load More</button>
 								</div>
 							</div>
-							<!-- /post -->
+							
 							<?php
-									}
+							
 								}else{
+							
 							?>
 								<div>
 									<p style="text-align: center;">Sorry!!!  No Results</p>
@@ -62,7 +66,7 @@
 							<?php
 								}
 							?>
-							
+							<!-- /post -->
 						</div>
 					</div>
 					
